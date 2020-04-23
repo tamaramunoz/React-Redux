@@ -19,13 +19,20 @@ const PokeDetail = () => {
 
 
     return pokeInfo ? (
-        <div className="card mt-4 text-center">
-            <div className="card-body">
-                <img src={pokeInfo.foto} alt="imagen-pokemon" className="img-fluid" />
-                <div className="card-title text-uppercase">{pokeInfo.nombre}</div>
-                <p className="card-text">Alto: {pokeInfo.alto} | Ancho: {pokeInfo.ancho}</p>
-            </div>
-
+        <div className="mt-5">
+            <div className="card mb-3">
+                <div className="row no-gutters">
+                    <div className="col-md-4">
+                        <img src={pokeInfo.foto} className="card-img" alt="imagen-pokemon" />
+                    </div>
+                        <div className="col-md-8">
+                            <div className="card-body text-center">
+                                <h5 className="card-title text-uppercase mt-4">{pokeInfo.nombre}</h5>
+                                <p className="card-text">Alto: {pokeInfo.alto} | Ancho: {pokeInfo.ancho}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
     ) : null
 }

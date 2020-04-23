@@ -35,24 +35,24 @@ const Pokemones = () => {
                 {
                     next &&
                     <button 
-                        className="btn btn-dark"
+                        className="btn-next"
                         onClick={() => dispatch(siguientePokemonAccion())}>Siguiente</button>
                 }
                 {
                     previous &&
                     <button 
-                        className="btn btn-dark"
+                        className="btn-next"
                         onClick={() => dispatch(anteriorPokemonAccion())}>Anterior</button>
                 }
             </div>
 
-                <ul className="list-group mt-3">
+                <ul className="list-group mt-5">
                     {
                         pokemones.map(item => (
                             <li key={item.name} className="list-group-item text-uppercase">
                                 {item.name}
                                 <button 
-                                    className="btn btn-dark btn-sm float-right"
+                                    className="btn-data btn-sm float-right"
                                     onClick={ () => dispatch(pokeDetalleAccion(item.url))}
                                 
                                 >Info</button>
@@ -62,7 +62,7 @@ const Pokemones = () => {
                 </ul>
 
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 mt-5">
                 <h3>Detalle Pokemon</h3>
                 <PokeDetail />
             </div>

@@ -10,7 +10,7 @@ function App() {
 
   return (
     <Provider store={store} >
-      <div className="container mt-3">
+      <div className="container mt-5">
         <Pokemones />
 
       </div>

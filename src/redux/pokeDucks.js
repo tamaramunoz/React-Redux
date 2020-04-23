@@ -43,7 +43,7 @@ export const pokeDetalleAccion = (url = 'https://pokeapi.co/api/v2/pokemon/1/') 
     }
     try {
         const res = await axios.get(url)
-        console.log(res.data)
+        // console.log(res.data)
         dispatch({
             type: POKE_INFO_EXITO,
             payload: {
@@ -80,7 +80,7 @@ export const obtenerPokemonesAccion = () => async (dispatch, getState) => {
     }
 
     try {
-        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=20`)
+        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=10`)
         dispatch({
             type: OBTENER_POKEMONES_EXITO,
             payload: res.data
