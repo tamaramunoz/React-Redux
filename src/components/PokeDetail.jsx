@@ -19,7 +19,7 @@ const PokeDetail = () => {
 
 
     return pokeInfo ? (
-        <div className="mt-5">
+        <div className="mt-4">
             <div className="card mb-3">
                 <div className="row no-gutters">
                     <div className="col-md-4">
